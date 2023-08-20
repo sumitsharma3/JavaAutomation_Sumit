@@ -40,12 +40,21 @@ public void Login_Test_case02() {
 	driver.findElement(By.cssSelector("#login-button")).click();
 		
 	}
+@Test	
+public void Login_Test_case03() {
+	driver.findElement(By.id("user-name")).sendKeys("locked_out_user");
+	driver.findElement(By.xpath("//input[@id='password']")).sendKeys("secret_sauce");	
+	driver.findElement(By.cssSelector("#login-button")).click();
+		
+	}
+
+
 @AfterMethod
 public void TearDown() {
 	
 	driver.quit();
 	
 }
-	
+
 
 }
