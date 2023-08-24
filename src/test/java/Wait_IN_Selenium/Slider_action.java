@@ -26,6 +26,7 @@ public class Slider_action {
 		
 		WebElement slider = driver.findElement(By.xpath("//div[@id = 'slider']/span"));
 		
+		
 		Actions action = new Actions(driver);
 		
 		action.clickAndHold(slider).moveByOffset(200, 0).release().perform();
@@ -34,12 +35,14 @@ public class Slider_action {
 		action.dragAndDropBy(slider, -200, 0).perform();
 		
 		//trying the slider by getting the width of the span
+		WebElement divelement = driver.findElement(By.xpath("//div[@id = 'slider']"));
 		
-		Dimension divsize = slider.getSize();
+		Dimension divsize = divelement.getSize();
 		
 		int divwidth = divsize.getWidth();
 		
-		action.dragAndDropBy(slider, divwidth/2 , 0).perform();
+		action.clickAndHold(slider).moveByOffset(divwidth/2, 0).release().perform();
+
 		
 		Thread.sleep(5000);
 		driver.quit();
