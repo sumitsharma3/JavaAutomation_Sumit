@@ -33,15 +33,41 @@ public class DatePicker {
 			
 			
 			driver.findElement(By.xpath("//input[@id='datepicker']")).click();
-			Thread.sleep(10000);
 			
+			String ExpectedDate = "March2021";
+			String ActualDate = "";
+			String Month = "";
+			String Year = "";
+			
+			Month = driver.findElement(By.xpath("//span[@class = 'ui-datepicker-month']")).getText();		
+			Year = driver.findElement(By.xpath("//span[@class = 'ui-datepicker-year']")).getText();
+			ActualDate = Month+Year;
+			
+			while(true) {
+				Month = driver.findElement(By.xpath("//span[@class = 'ui-datepicker-month']")).getText();		
+				Year = driver.findElement(By.xpath("//span[@class = 'ui-datepicker-year']")).getText();
+				ActualDate = Month+Year;
+				
+				if(ExpectedDate.equalsIgnoreCase(ActualDate)) {
+					
+					break;
+					
+				}
+				
+				driver.findElement(By.xpath("//span[@class = 'ui-icon ui-icon-circle-triangle-w']")).click();
+				
+				
+			}
+			
+			driver.findElement(By.xpath("//a[contains(text(),'27')]")).click();
 			
 			
 		}
 		
 		@AfterMethod
-		public void teardown() {
+		public void teardown() throws InterruptedException {
 			
+			Thread.sleep(10000);
 			driver.quit();
 			
 		}
