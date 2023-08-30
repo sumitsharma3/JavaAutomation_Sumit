@@ -21,6 +21,8 @@ WebDriver driver ;
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
+		
+		
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver ;
 		
 		jsExecutor.executeScript("window.scrollBy(0, 500);");

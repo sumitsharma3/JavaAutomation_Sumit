@@ -30,7 +30,8 @@ public class AutoSuggestion {
 		WebElement tag = driver.findElement(By.xpath("//input[@id='tags']"));
 		tag.sendKeys("A");
 		
-List<WebElement> autoSuggestions = driver.findElements(By.xpath("//ul[@id='ui-id-1']/li"));
+		
+		List<WebElement> autoSuggestions = driver.findElements(By.xpath("//ul[@id='ui-id-1']/li"));
 		
 		for(WebElement autoSuggestion : autoSuggestions) 
 		{		

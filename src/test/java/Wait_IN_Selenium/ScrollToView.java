@@ -26,6 +26,7 @@ public class ScrollToView {
 			
 			JavascriptExecutor  jsExecutor = (JavascriptExecutor) driver ;
 			
+			
 			jsExecutor.executeScript("arguments[0].scrollIntoView();", position);
 			
 			Thread.sleep(10000);

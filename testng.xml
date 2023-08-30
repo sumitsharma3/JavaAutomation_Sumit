@@ -4,6 +4,18 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="TestScript.LoginTest"/>
+      <class name="Wait_IN_Selenium.Explicit_Wait"/>
+      <class name="Wait_IN_Selenium.Demo_Wait_Script"/>
+      <class name="Wait_IN_Selenium.DatePicker"/>
+      <class name="Wait_IN_Selenium.ActionClass"/>
+      <class name="Wait_IN_Selenium.AutoSuggestion"/>
+      <class name="Wait_IN_Selenium.DoubleClickFunction"/>
+      <class name="Wait_IN_Selenium.Fluent_Wait"/>
+      <class name="Wait_IN_Selenium.Iframe_Action"/>
+      <class name="Wait_IN_Selenium.MouseHover"/>
+      <class name="Wait_IN_Selenium.ScrollToView"/>
+      <class name="Wait_IN_Selenium.Slider_action"/>
+      <class name="Wait_IN_Selenium.windowScroll"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
