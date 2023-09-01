@@ -47,7 +47,8 @@ public class DatePicker {
 				Month = driver.findElement(By.xpath("//span[@class = 'ui-datepicker-month']")).getText();		
 				Year = driver.findElement(By.xpath("//span[@class = 'ui-datepicker-year']")).getText();
 				ActualDate = Month+Year;
-				
+			
+			
 				if(ExpectedDate.equalsIgnoreCase(ActualDate)) {
 					
 					break;
